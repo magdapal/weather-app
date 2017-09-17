@@ -1,0 +1,30 @@
+<section id="weather-forecast">
+	<h1 class="text-center weather-header">Your Weather</h1>
+	<div class="text-center city">
+	  <span>{{ myLocalization?.city }}</span>
+	</div>
+	<div class="text-center icon-weather">
+	  <img src={{weather?.icon}}/>
+	</div>
+	<div class="text-center temperature">
+		<div *ngIf="!farenheit">
+		  <span> {{ tempC }}</span>
+		</div>
+		<div *ngIf="farenheit">
+		  <span> {{ tempF }}</span>
+		</div>
+		<span class="unit" (click)="toFarenheit()">{{unit}}</span> 
+	</div>
+	<div class="text-center other-data">
+	  <div class="weather-icon pressure"><img src="/assets/barometer.png" /><span>{{generalData?.main.pressure}} hPa</span></div>
+	  <div class="weather-icon humidity"><img src="/assets/humidity.png" /><span>{{generalData?.main.humidity}} %</span></div>
+	  <div class="weather-icon wind"><img src="/assets/wind.png" /><span>{{generalData?.wind.speed}} m/s</span></div>
+	  <span></span>
+	</div>
+
+
+
+</section>
+
+ 
+

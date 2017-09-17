@@ -1,0 +1,50 @@
+#weather-forecast {
+	color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif !important;
+	margin-top: 50px;
+	.weather-header {
+		font-size: 4.2em;
+		font-weight: bold;
+	}
+	.city {
+		margin-top: 30px;
+		span {
+			font-size: 2.3em;
+		}
+	}
+	.icon-weather {
+		img {
+			width: 80px;
+		}
+	}
+	.temperature {
+		margin-top: 10px;
+		div {
+			display: inline;
+		}
+		span {
+			font-size: 1.7em;
+			font-weight: bold;
+		}
+		.unit {
+			color: #ffff00;
+			cursor: pointer;
+		}
+	}
+	.other-data {
+		margin-top: 5px;
+		.weather-icon {
+			display: inline;
+			margin-right: 15px;
+			img {
+				margin-right: 5px;
+			}
+			&.humidity {
+        img {
+        	position: relative;
+        	top: -3px;
+        }
+      }
+		}
+	}
+}
