@@ -44,19 +44,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
     }
-    AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-root',
-            template: __webpack_require__("./src/app/app.component.html"),
-            styles: [__webpack_require__("./src/app/app.component.css")]
-        })
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-root',
+        template: __webpack_require__("./src/app/app.component.html"),
+        styles: [__webpack_require__("./src/app/app.component.css")]
+    })
+], AppComponent);
 
 //# sourceMappingURL=/home/magda/Desktop/weather/weather-app/src/app.component.js.map
 
@@ -85,27 +85,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = /** @class */ (function () {
+var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__show_weather_show_weather_component__["a" /* ShowWeatherComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__show_weather_show_weather_component__["a" /* ShowWeatherComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
-            ],
-            providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__show_weather_show_weather_component__["a" /* ShowWeatherComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__show_weather_show_weather_component__["a" /* ShowWeatherComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
+        ],
+        providers: [],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
 
 //# sourceMappingURL=/home/magda/Desktop/weather/weather-app/src/app.module.js.map
 
@@ -121,7 +121,7 @@ module.exports = "<section id=\"weather-forecast\">\n\t<h1 class=\"text-center w
 /***/ "./src/app/show-weather/show-weather.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "#weather-forecast {\n  color: #ffffff;\n  font-family: 'Source Sans Pro', sans-serif !important;\n  margin-top: 50px; }\n  #weather-forecast .weather-header {\n    font-size: 4.2em;\n    font-weight: bold; }\n  #weather-forecast .city {\n    margin-top: 30px; }\n    #weather-forecast .city span {\n      font-size: 2.3em; }\n  #weather-forecast .icon-weather img {\n    width: 80px; }\n  #weather-forecast .temperature {\n    margin-top: 10px; }\n    #weather-forecast .temperature div {\n      display: inline; }\n    #weather-forecast .temperature span {\n      font-size: 1.7em;\n      font-weight: bold; }\n    #weather-forecast .temperature .unit {\n      color: #ffff00;\n      cursor: pointer; }\n  #weather-forecast .other-data {\n    margin-top: 5px; }\n    #weather-forecast .other-data .weather-icon {\n      display: inline;\n      margin-right: 15px; }\n      #weather-forecast .other-data .weather-icon img {\n        margin-right: 5px; }\n      #weather-forecast .other-data .weather-icon.humidity img {\n        position: relative;\n        top: -3px; }\n"
+module.exports = "#weather-forecast {\n  color: #ffffff;\n  font-family: 'Source Sans Pro', sans-serif !important;\n  margin-top: 50px; }\n  #weather-forecast .weather-header {\n    font-size: 4.2em;\n    font-weight: bold; }\n  #weather-forecast .city {\n    margin-top: 30px; }\n  #weather-forecast .city span {\n      font-size: 2.3em; }\n  #weather-forecast .icon-weather img {\n    width: 80px; }\n  #weather-forecast .temperature {\n    margin-top: 10px; }\n  #weather-forecast .temperature div {\n      display: inline; }\n  #weather-forecast .temperature span {\n      font-size: 1.7em;\n      font-weight: bold; }\n  #weather-forecast .temperature .unit {\n      color: #ffff00;\n      cursor: pointer; }\n  #weather-forecast .other-data {\n    margin-top: 5px; }\n  #weather-forecast .other-data .weather-icon {\n      display: inline;\n      margin-right: 15px; }\n  #weather-forecast .other-data .weather-icon img {\n        margin-right: 5px; }\n  #weather-forecast .other-data .weather-icon.humidity img {\n        position: relative;\n        top: -3px; }\n"
 
 /***/ }),
 
@@ -143,7 +143,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ShowWeatherComponent = /** @class */ (function () {
+var ShowWeatherComponent = (function () {
     function ShowWeatherComponent(http) {
         this.http = http;
         this.farenheit = false;
@@ -175,18 +175,18 @@ var ShowWeatherComponent = /** @class */ (function () {
             this.unit = "°C";
         }
     };
-    ShowWeatherComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-show-weather',
-            template: __webpack_require__("./src/app/show-weather/show-weather.component.html"),
-            styles: [__webpack_require__("./src/app/show-weather/show-weather.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
-    ], ShowWeatherComponent);
     return ShowWeatherComponent;
-    var _a;
 }());
+ShowWeatherComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-show-weather',
+        template: __webpack_require__("./src/app/show-weather/show-weather.component.html"),
+        styles: [__webpack_require__("./src/app/show-weather/show-weather.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], ShowWeatherComponent);
 
+var _a;
 //# sourceMappingURL=/home/magda/Desktop/weather/weather-app/src/show-weather.component.js.map
 
 /***/ }),
@@ -200,6 +200,7 @@ var ShowWeatherComponent = /** @class */ (function () {
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
