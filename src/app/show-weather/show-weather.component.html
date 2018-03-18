@@ -1,7 +1,7 @@
 <section id="weather-forecast">
 	<h1 class="text-center weather-header">Your Weather</h1>
 	<div class="text-center city">
-	  <span>{{ myLocalization?.city }}</span>
+	  <span>{{ generalData?.name }}</span>
 	</div>
 	<div class="text-center icon-weather">
 	  <img src={{weather?.icon}}/>
@@ -21,9 +21,6 @@
 	  <div class="weather-icon wind"><img src="assets/wind.png" /><span>{{generalData?.wind.speed}} m/s</span></div>
 	  <span></span>
 	</div>
-
-
-
 </section>
 
 

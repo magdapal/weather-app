@@ -16,7 +16,7 @@ export class ShowWeatherComponent implements OnInit {
   farenheit : boolean = false;
   unit: string = "°C";
 
- 
+
   constructor(private http: Http) {
 
   }
@@ -25,16 +25,15 @@ export class ShowWeatherComponent implements OnInit {
   ngOnInit() {
   	this.http.get('https://geoip.nekudo.com/api/en/')
       .subscribe(response => {
-  	    this.myLocalization = response.json();
-        let latitude = this.myLocalization.location.latitude;
-        let longitude = this.myLocalization.location.longitude;
+        let latitude = response.json().location.latitude;
+        let longitude = response.json().location.longitude;
   	    let url = 'https://fcc-weather-api.glitch.me/api/current?lon=' + longitude + '&' + 'lat=' + latitude;
         this.http.get(url)
   	    .subscribe(response=> {
   	    	this.tempC = response.json().main.temp;
   	    	this.tempF = Math.round(((response.json().main.temp *1.8) + 32)*100)/100;
   	    	this.weather = response.json().weather[0];
-  	    	this.generalData = response.json();
+			this.generalData = response.json();
   	    });
   	  });
 	 }
